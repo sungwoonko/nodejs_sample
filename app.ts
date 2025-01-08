@@ -41,3 +41,7 @@ function add(x:number, y:number):number { // 괄호 안에 있는 변수는 매�
     
     return x + y;
 }
+
+
+const obj = {width: 10, height : 15};
+const area = obj.width * obj.height;
