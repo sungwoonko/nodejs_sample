@@ -68,10 +68,10 @@ var Snake = /** @class */ (function (_super) {
     return Snake;
 }(Animal));
 var zoo = [new Rhino(), new Elephant(), new Snake()];
-// Animal[]
-// 2. 명시적 타입 지정
+// Animal[] 추론 추측, 그러나 다른 타입이 지정됨
+// 2. 명시적 타입 지정(Explict Types)
 // This is an industrial-grade general-purpose greeter function:
 function greet(person, date) {
-    console.log('Hello ${person}, today is ${date}!');
+    console.log("Hello ".concat(person, ", today is ").concat(date, "!"));
 }
 greet("Brendan", new Date());

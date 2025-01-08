@@ -29,22 +29,22 @@ let x  = 3;
 
 class Animal {}
 class Rhino extends Animal {
-    hasHorn: boolean = true;    
+    hasHorn:boolean = true;    
 }
 class Elephant extends Animal {
-    hasTrunk: boolean = true;
+    hasTrunk:boolean = true;
 }
 class Snake extends Animal {
-    hasLegs: boolean = false;
+    hasLegs:boolean = false;
 }
 
 let zoo = [new Rhino(), new Elephant(), new Snake()];
-// Animal[] 추론 추측, 그러나 다른 타입이 지정됨됨
+// Animal[] 추론 추측, 그러나 다른 타입이 지정됨
 
 // 2. 명시적 타입 지정(Explict Types)
 // This is an industrial-grade general-purpose greeter function:
-function greet(person: string, date: Date){
-    console.log('Hello ${person}, today is ${date}!');
+function greet(person:string, date:Date){
+    console.log(`Hello ${person}, today is ${date}!`);
 }
 
 greet("Brendan",new Date());
