@@ -1,6 +1,6 @@
 console.log("hello")
 
-
+// 변수의 타입 명시 방법
 let a:number = 10; //숫자, number
 let b:string = "Hello"; // 문자열 , String 
 let c:boolean = true; // Boolean
@@ -34,3 +34,10 @@ let meterLength = addLength / 10;
 
 console.log(addLength +"cm")
 console.log(meterLength + "m")
+
+//-------------------
+// 메서드의 타입 명시 방법
+function add(x:number, y:number):number { // 괄호 안에 있는 변수는 매개 변수라고 해서 초기화가 필요 (타입 지정) + 반환 타입 지정 가능
+    
+    return x + y;
+}
