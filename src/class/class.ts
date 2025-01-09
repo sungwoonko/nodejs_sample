@@ -89,33 +89,21 @@ user1.study();
 user2.study();
 
 // 클래스의 상속
-class CleaningRobot { //Members
+class CleaningRobot extends Robot1{ //Members
     
     // Property 또는 Field(속성, 필드)
-    name: string;
-    model: string;
     cleaningSchedule: string[];
-    status: string = "Active"; 
 
     // Constructor(생성자)
     constructor(name: string, model: string,cleaningSchedule: string[]){
-        this.name = name;
-        this.model = model;
+        super(name,model)
         this.cleaningSchedule = cleaningSchedule;
     };
 
 
     // Method(행동)
-    performTask (task: string){
-      console.log(`${this.name} is performing ${task}.`);
-    };
-
-    updateStatus (newStatus: string){
-        this.status = newStatus;
-        console.log(`${this.name} 's status is now ${this.status}`);
-    };
-
-    performCleaning() {
+    // override performTask() { // 오버라이드 : 기존에 있던거에 재정의 
+    performTask() {  // override 생략 가능 
         console.log(`${this.name} 's status is now ${this.cleaningSchedule.join(",")}.`);
     }
 }
