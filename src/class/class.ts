@@ -25,7 +25,7 @@ class Robot1 { //Members
 }
 
 
-// Create Instance of the Robot class;
+// Create Instance of the Robot class; => 생성자 호출출
 let r11 = new Robot("r1-a11","optimus1")
 let r22 = new Robot("r2-a22","optimus2")
 let r33 = new Robot("r3-a33","optimus3")
@@ -40,3 +40,17 @@ console.log(r3.status)
 r1.performTask("charging");
 r2.performTask("exploreing");
 r3.updateStatus("repairing");
+
+
+// No-args Constructor
+
+class Pet{
+    category: string = "Cat";
+    name: string = "Chu";
+
+    // 기본 생성자
+    // constructor() {}
+}
+
+let p1 = new Pet();
+console.log(p1.name);
