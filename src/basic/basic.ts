@@ -27,19 +27,19 @@ let x  = 3;
 // x = [0,1,null];
 
 
-class Animal {}
-class Rhino extends Animal {
-    hasHorn:boolean = true;    
-}
-class Elephant extends Animal {
-    hasTrunk:boolean = true;
-}
-class Snake extends Animal {
-    hasLegs:boolean = false;
-}
+// class Animal {}
+// class Rhino extends Animal {
+//     hasHorn:boolean = true;    
+// }
+// class Elephant extends Animal {
+//     hasTrunk:boolean = true;
+// }
+// class Snake extends Animal {
+//     hasLegs:boolean = false;
+// }
 
-let zoo = [new Rhino(), new Elephant(), new Snake()];
-// Animal[] 추론 추측, 그러나 다른 타입이 지정됨
+// let zoo = [new Rhino(), new Elephant(), new Snake()];
+// // Animal[] 추론 추측, 그러나 다른 타입이 지정됨
 
 // 2. 명시적 타입 지정(Explict Types)
 // This is an industrial-grade general-purpose greeter function:
