@@ -2,15 +2,24 @@
 class Robot1 { //Members
     
     // Property 또는 Field(속성, 필드)
-    name: string;
-    model: string;
-    status: string = "Active"; 
+    private name: string;
+    private model: string;
+    protected status: string = "Active"; 
 
     // Constructor(생성자)
     constructor(name: string, model: string){
         this.name = name;
         this.model = model;
     };
+
+    //Getter for name
+    public getName(): string {
+        return this.name;
+    }
+    //Getter for model
+    public getModel(): string {
+        return this.model;
+    }
 
 
     // Method(행동)
@@ -25,7 +34,7 @@ class Robot1 { //Members
 }
 
 
-// Create Instance of the Robot class; => 생성자 호출출
+// Create Instance of the Robot class; => 생성자 호출
 let r11 = new Robot("r1-a11","optimus1")
 let r22 = new Robot("r2-a22","optimus2")
 let r33 = new Robot("r3-a33","optimus3")
@@ -33,7 +42,7 @@ let r33 = new Robot("r3-a33","optimus3")
 // Accessing fields and Calling methods
 console.log(r1.name)
 console.log(r2.model)
-console.log(r3.status)
+// console.log(r3.status)
 
 
 // 객체
@@ -103,9 +112,9 @@ class CleaningRobot extends Robot1{ //Members
 
     // Method(행동)
     // override performTask() { // 오버라이드 : 기존에 있던거에 재정의 
-    performTask() {  // override 생략 가능 
-        console.log(`${this.name} 's status is now ${this.cleaningSchedule.join(",")}.`);
-    }
+    // performTask() {  // override 생략 가능 
+    //     console.log(`${this.name} 's status is now ${this.cleaningSchedule.join(",")}.`);
+    // }
 }
 
 class CookingRobot { //Members
@@ -137,4 +146,34 @@ class CookingRobot { //Members
     performCleaning() {
         console.log(`${this.name} 's status is now ${this.availableMenus.join(",")}.`);
     }
+}
+
+
+// 접근 제어자 Visivility Modifier / Access Modifier
+// public - protected - private
+// (default)
+// public : 모든 클래스에서 접근 가능 (기본값)
+// protected : 같은 클래스와 자식 클래스에서 접근 가능
+// private : 해당 클래스 내에서만 접근 가능
+
+
+let c1 = new CleaningRobot("aer-1","dfsdf",["sun","mon"])
+console.log(c1.cleaningSchedule);
+c1.performTask;
+console.log(c1.getName());
+
+
+//interface
+interface UserDTO {
+    id: number;
+    name: string;
+    email: string;
+    createAt: Date;
+}
+
+// API 응답 형태를 정의하는 경우엔
+interface ApiReponseP{
+    success: boolean;
+    data: UserDTO;
+    message?: string;
 }
