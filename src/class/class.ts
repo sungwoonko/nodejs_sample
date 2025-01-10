@@ -35,20 +35,20 @@ class Robot1 { //Members
 
 
 // Create Instance of the Robot class; => 생성자 호출
-let r11 = new Robot("r1-a11","optimus1")
-let r22 = new Robot("r2-a22","optimus2")
-let r33 = new Robot("r3-a33","optimus3")
+let r11 = new Robot1("r1-a11","optimus1")
+let r22 = new Robot1("r2-a22","optimus2")
+let r33 = new Robot1("r3-a33","optimus3")
 
 // Accessing fields and Calling methods
-console.log(r1.name)
-console.log(r2.model)
+console.log(r11.getName)
+console.log(r22.getModel)
 // console.log(r3.status)
 
 
 // 객체
-r1.performTask("charging");
-r2.performTask("exploreing");
-r3.updateStatus("repairing");
+r11.performTask("charging");
+r22.performTask("exploreing");
+r33.updateStatus("repairing");
 
 
 // No-args Constructor
