@@ -22,7 +22,7 @@ var arg = 10;
 indentity1(arg);
 // 비효율적인 코드 해결 방법
 // -> Use Generics
-function indentityWithGenerics(arg) {
+function indentityWithGenerics1(arg) {
     return arg;
 }
 // -> Use Generics general version "T"
@@ -41,3 +41,35 @@ console.log("type of result: " + typeof result);
 console.log("result of Using generics: " + result);
 var result2 = indentityWithGenerics3(20, "Hello");
 console.log(result2);
+// 간단한 테스트 패턴 연습
+function indentityWithGenerics(arg) {
+    return arg;
+}
+function isNumber(value) {
+    return typeof value === 'number' && !isNaN(value);
+}
+function isString(value) {
+    return typeof value === 'string';
+}
+// given - 테스트에 필요한 초기 데이터를 설정
+var testValue1 = 20;
+var testValue2 = "hi";
+var testValue3 = [1, 23];
+// when1 - 테스터를 실행하는 부분
+var numberIdentity = indentityWithGenerics(testValue1);
+// then1 - 결과를 검증하고 출력하는 부분
+console.log("input type is : ".concat(typeof testValue1));
+console.log("output type is : ".concat(typeof numberIdentity));
+console.log("input type is : ".concat(isNumber(numberIdentity)));
+// when2
+var stringIdentity = indentityWithGenerics(testValue3);
+// then2 
+console.log("input type is : ".concat(typeof testValue3));
+console.log("output type is : ".concat(typeof stringIdentity));
+console.log("is string : ".concat(isString(stringIdentity))); // true
+// when3
+var arrayIdentity = indentityWithGenerics(testValue3);
+// then3 
+console.log("input type is : ".concat(typeof testValue3));
+console.log("output type is : ".concat(typeof arrayIdentity));
+console.log("is array : ".concat(Array.isArray(arrayIdentity))); // true
